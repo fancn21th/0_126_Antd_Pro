@@ -105,16 +105,29 @@ export default {
       authority: ['admin', 'user'],
       routes: [
         {
-          name: 'table-list',
-          icon: 'smile',
-          path: '/table-list',
-          component: './table-list',
-        },
-        {
           path: '/',
           name: 'welcome',
           icon: 'smile',
           component: './Welcome',
+        },
+        {
+          path: '/blahblah',
+          name: 'blahblah',
+          icon: 'dashboard',
+          routes: [
+            {
+              name: 'table-list',
+              icon: 'smile',
+              path: '/blahblah/table-list',
+              component: './table-list',
+            },
+            {
+              name: 'yet-another-table-list',
+              icon: 'smile',
+              path: '/blahblah/yet-another-table-list',
+              component: './yet-another-table-list',
+            },
+          ],
         },
       ],
     },
